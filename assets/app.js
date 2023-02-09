@@ -29,7 +29,7 @@ function getWeather() {
                     <img  class ="icon" src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt=""> 
                     <p> ${'Temprature:'} ${data.main.temp} <p>
                     <p> ${'Humidity:'} ${data.main.humidity}</p>
-                    <p>  ${'Wind:'} ${data.wind.speed}</p>`
+                    <p>  ${'Wind Speed:'} ${data.wind.speed}</p>`
         
                     fetch(`${newUrl}/forecast?lat=${city.lat}&lon=${city.long}&appid=${apiKey}&units=imperial`)
                     .then(function(response) {
@@ -47,31 +47,31 @@ function getWeather() {
                         <img src="http://openweathermap.org/img/wn/${array[0].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[0].main.temp} <p>
                         <p> ${'Humidity:'} ${array[0].main.humidity}</p>
-                        <p>  ${'Wind:'} ${array[0].wind.speed}</p>`;
+                        <p>  ${'Wind Speed:'} ${array[0].wind.speed}</p>`;
                                     dTwo.innerHTML =
                                         `<p>${dayjs().add(2, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[1].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[1].main.temp} <p>
                         <p> ${'Humidity:'} ${array[1].main.humidity}</p>
-                        <p>  ${'Wind:'} ${array[1].wind.speed}</p>`;
+                        <p>  ${'Wind Speed:'} ${array[1].wind.speed}</p>`;
                                     dThree.innerHTML =
                                         `<p>${dayjs().add(3, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[2].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[2].main.temp} <p>
                         <p> ${'Humidity:'} ${array[2].main.humidity}</p>
-                        <p>  ${'Wind:'} ${array[2].wind.speed}</p>`;
+                        <p>  ${'Wind Speed:'} ${array[2].wind.speed}</p>`;
                                     dFour.innerHTML =
                                         `<p>${dayjs().add(4, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[3].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[3].main.temp} <p>
                         <p> ${'Humidity:'} ${array[3].main.humidity}</p>
-                        <p> ${'Wind:'} ${array[3].wind.speed}</p>`;
+                        <p> ${'Wind Speed:'} ${array[3].wind.speed}</p>`;
                                     dFive.innerHTML =
                                         `<p>${dayjs().add(5, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[4].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[4].main.temp} <p>
                         <p> ${'Humidity:'} ${array[4].main.humidity}</p>
-                        <p>  ${'Wind:'} ${array[4].wind.speed}</p>`;
+                        <p>  ${'Wind Spped:'} ${array[4].wind.speed}</p>`;
                                 }
                             }) 
                     })
