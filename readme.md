@@ -13,6 +13,7 @@ This is an application where you can come and search for you the weather that yo
 ## Link
 
 ## Usage
+<img width="400" alt="Screenshot 2023-02-08 at 9 39 27 PM jpg" src="https://user-images.githubusercontent.com/103465115/217720022-5e20ef28-cd31-43bd-927f-196388879c7e.png">
 
 ## License 
 none
