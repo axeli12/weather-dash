@@ -19,41 +19,41 @@
         <h1>Weather Dash</h1>
     </header>
 
-    <div id="container-fluid">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 bg-kight">
-                <h5>Search A City:</h5>
-                <div class="class input-group mb-3">
-                    <input type="text" id="enterCity" class="class formControl" placeholder="Enter A City" aria-label="Enter A City">
-                    <div class="class inAppend">
-                        <button class="btn btn-primary" type="button" id="searchBtn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+            <div class="col-md-4 p-3 justify-content-start">
+                <div class="mb-3">
+                    <h3>Search for a city:</h3>
+                    <input id="tags" type="text" class="form-control city" placeholder="Enter city" value="">
                 </div>
-                <div class="col-lg-9">
-                    <div class="row mr-0">
-                        <div class="col-lg-11 card m-3 d-none" id="todayWeather">
-                            <div class="card-body">
-                                <h3 id="cityName" class="city-name align-middle"></h3>
-                                <img id="currentPic" alt="">
-                                <p id="temperature"></p>
-                                <p id="humidity"></p>
-                                <p id="wind-speed"></p>
-                            </div>
-                        </div>
+                <div class="d-grid gap-2 col-12 mx-auto">
+                    <button class="btn btn-dark" type="button">Search</button>
+                </div>
+                <hr>
+                <ul class="list-group text-center ">
+                </ul>
+            </div>
+            
+            <div class="col-md-8 p-4 text-center">
+                <section lass="col-md-6 p-4" class="show-current-city text-dark p-3">
+                </section>
+
+                <div class="container">
+                <section class="five-days row p-3 mt-4 text-center">
+
+                    <section class="text text-center p-3 align-item-center"></section>
+                    <div class="col-md-2 col-lg-2 col-sm-2 day-1">
                     </div>
-                    <div class="row d-none" id="fivedayHeader">
-                        <div class="col-12">
-                            <h3>5-Day Forecast</h3>
-                        </div>
+                    <div class="col-md-2 col-lg-2 col-sm-2 day-2">
                     </div>
-                    <div class="row">
-                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                    <div class="col-md-2 col-lg-2 col-sm-2 day-3">
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-sm-2 day-4">
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-sm-2 day-5">
+                    </div>
+                </section>
+                </div>
             </div>
         </div>
     </div>
