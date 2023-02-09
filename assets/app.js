@@ -7,11 +7,11 @@
 let searchBtn = document.querySelector('.btn');
 let today = document.querySelector('.show-current-city');
 let searchList = document.querySelector('.list-group');
-let dayOne = document.querySelector('.day-1');
-let dayTwo = document.querySelector('.day-2');
-let dayThree = document.querySelector('.day-3');
-let dayFour = document.querySelector('.day-4');
-let dayFive = document.querySelector('.day-5');
+let dOne = document.querySelector('.day-1');
+let dTwo = document.querySelector('.day-2');
+let dThree = document.querySelector('.day-3');
+let dFour = document.querySelector('.day-4');
+let dFive = document.querySelector('.day-5');
 let apiKey = "167274a7d409a7fb3257f51020307787"
 let newUrl = 'https://api.openweathermap.org/data/2.5';
 
@@ -41,32 +41,32 @@ function getWeather() {
                                     for (i = 0; i < array.length; i = i + 8) {
                                         arr.push(array[i]);
                                     }
-                                    dayOne.innerHTML =
+                                    dOne.innerHTML =
                                         `
                                         <p>${dayjs().add(1, 'day').format('MM/DD/YY')}</p>
                         <img src="http://openweathermap.org/img/wn/${array[0].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[0].main.temp} <p>
                         <p> ${'Humidity:'} ${array[0].main.humidity}</p>
                         <p>  ${'Wind:'} ${array[0].wind.speed}</p>`;
-                                    dayTwo.innerHTML =
+                                    dTwo.innerHTML =
                                         `<p>${dayjs().add(2, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[1].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[1].main.temp} <p>
                         <p> ${'Humidity:'} ${array[1].main.humidity}</p>
                         <p>  ${'Wind:'} ${array[1].wind.speed}</p>`;
-                                    dayThree.innerHTML =
+                                    dThree.innerHTML =
                                         `<p>${dayjs().add(3, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[2].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[2].main.temp} <p>
                         <p> ${'Humidity:'} ${array[2].main.humidity}</p>
                         <p>  ${'Wind:'} ${array[2].wind.speed}</p>`;
-                                    dayFour.innerHTML =
+                                    dFour.innerHTML =
                                         `<p>${dayjs().add(4, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[3].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[3].main.temp} <p>
                         <p> ${'Humidity:'} ${array[3].main.humidity}</p>
                         <p> ${'Wind:'} ${array[3].wind.speed}</p>`;
-                                    dayFive.innerHTML =
+                                    dFive.innerHTML =
                                         `<p>${dayjs().add(5, 'day').format('MM/DD/YY')}</p>
                                         <img src="http://openweathermap.org/img/wn/${array[4].weather[0].icon}.png" alt=""> 
                         <p> ${'Temprature:'} ${array[4].main.temp} <p>
@@ -81,12 +81,12 @@ function getWeather() {
     // Shows text above 5day forecast
     function addText() {
         document.querySelector('.text').innerHTML = `
-        <h3>5Day forecast</h3>
+        <h3>5 Day forecast</h3>
         `
     }
     
      // Get the latitude and longitude of the city
-    function getLatitudeAndLongitude(name) {
+    function getLatAndLon(name) {
         let cityName = name.length ? name : document.querySelector('#tags').value;
         fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`)
             .then(function (response) {
@@ -142,4 +142,4 @@ function getWeather() {
         let dataFromButton = event.target.getAttribute('data-city');
         showWeatherClickingOnButton(dataFromButton);
     })
-    searchBtn.addEventListener('click', getLatitudeAndLongitude); 
+    searchBtn.addEventListener('click', getLatAndLon); 
